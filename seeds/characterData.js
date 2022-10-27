@@ -32,6 +32,7 @@ const characterdata = [
    story_role: 'Love Interest',
    goal: 'To discover the name of the beautiful stranger he met one night',
    secret: 'Dumber than a bag of hammers (not that secret)',
+
    user_id: 3,
   },
   {
