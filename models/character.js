@@ -12,16 +12,32 @@ Characters.init(
             autoIncrement: true, 
         },
         characters_name: {
-          type: DataTypes.STRING,  
-        },
-        motivation:{
-            type: DataTypes.TEXT,
+          type: DataTypes.STRING, 
+          allowNull: false, 
         },
         companion:{
             type: DataTypes.STRING,
+            allowNull: false,
         },
         background:{
             type: DataTypes.STRING,
+            allowNull: false,
+        },
+        age:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        story_role:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        goal:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        secret:{
+            type: DataTypes.STRING,
+            allowNull: false
         },
         user_id:{
             type: DataTypes.INTEGER,
