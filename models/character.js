@@ -11,6 +11,10 @@ Characters.init(
             primaryKey: true,
             autoIncrement: true, 
         },
+        genre:{
+          type: DataTypes.STRING, 
+          allowNull: false, 
+        },
         characters_name: {
           type: DataTypes.STRING, 
           allowNull: false, 

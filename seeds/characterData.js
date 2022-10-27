@@ -3,16 +3,18 @@ const { Characters } = require('../models');
 const characterdata = [
   {
    character_name: 'Dr Valeria Silva',
-   companion: '',
-   background: '',
-   age: '',
-   story_role: '',
-   goal: '',
-   secret: '',
-   user_id: 2,
+   genre: 'Noir',
+   companion: 'Bob',
+   background: 'From the streets of the capital',
+   age: '29',
+   story_role: 'main',
+   goal: 'To help as many people as she can',
+   secret: 'none',
+   user_id: 1,
   },
   {
     character_name: '',
+    genre: '',
     companion: '',
     background: '',
     age: '',
@@ -22,14 +24,15 @@ const characterdata = [
     user_id: 2,
   },
   {
-    character_name: '',
+   character_name: '',
+   genre: '',
    companion: '',
    background: '',
    age: '',
    story_role: '',
    goal: '',
    secret: '',
-   user_id: 2,
+   user_id: 3,
   },
 ];
 
