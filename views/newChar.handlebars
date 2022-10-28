@@ -2,20 +2,25 @@
     <div class="row">
         <div class="col-sm">Select a genre!</div>
     </div>
-    <div class="row">
-        <div class="col-sm">Romance</div>
-        <div class="col-sm">Epic Fantasy</div>
-        <div class="col-sm">Noir</div>
+    <div class="row d-flex justify-content-around">
+        <div class="col-3">
+            <input class="btn btn-primary" type="button" value="Romance" id="romanceButton">
+        </div>
+        <div class="col-3">
+            <input class="btn btn-primary" type="button" value="Epic Fantasy" id="fantasyButton">
+        </div>
+        <div class="col-3">
+            <input class="btn btn-primary" type="button" value="Noir" id="noirButton">
+        </div>
     </div>
 </div>
-<section>
+<section class="d-none" id="questionaire">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Name:</span>
+    <span class="input-group-text inpLabel" id="basic-addon1">Name:</span>
   </div>
   <input type="text" class="form-control" placeholder="Character Name" aria-label="Character Name" aria-describedby="basic-addon1">
 </div>
-
     <div class="input-group mb-3">
         <h3>Who is your character's closest companion?</h3>
     <input type="text" class="form-control" placeholder="Companion" aria-label="Companion" aria-describedby="basic-addon1">
@@ -50,3 +55,5 @@
         <button class="btn btn-primary" type="submit">Submit</button>
     </div>
 </section>
+
+<script src="/js/newChar.js"></script>

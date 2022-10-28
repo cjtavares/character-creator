@@ -6,6 +6,14 @@ body {
 
     align-items: center;
     height: 100px;
-    width: 33px;
     height: 100%;
+}
+
+.inpLabel {
+    text-shadow:none;
+}
+
+#questionaire {
+    color: white;
+    text-shadow: 2px 2px black;
 }
