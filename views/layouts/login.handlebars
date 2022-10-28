@@ -16,6 +16,11 @@
   <header>
     <h1>Character Builder</h1>
   </header>
+  <nav>
+    {{#if logged_in}}
+    <button class="btn btn-primary logout" type="submit" onclick="window.location.href ='/user-characters'">Logout</button>
+    {{/if}}
+  </nav>
  
   <main>
       {{{body}}}
