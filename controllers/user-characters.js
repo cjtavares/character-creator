@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Characters, Users } = require('../models');
 const withAuth = require('../utils/auth');
-
+// localhost:3001/user-characters
 router.get('/', withAuth, async (req, res) => {
     try{
     const allUserCharacters = await Characters.findAll({
@@ -16,7 +16,6 @@ router.get('/', withAuth, async (req, res) => {
     const characters = allUserCharacters.map((character) => 
         character.get({plain: true})
     );
-    
     res.render('displaycharacters', {
        characters,
        logged_in: req.session.logged_in
