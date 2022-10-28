@@ -1,7 +1,9 @@
  <section>
    {{#each characters as |character|}}
       <div>
-        <p>{{character.characters_name}}</p>
+        <h2>
+        <a href="/character/{{id}}">{{characters_name}}</a>
+      </h2>
         <p> {{character.genre}}</p>
       </div>
     {{/each}}

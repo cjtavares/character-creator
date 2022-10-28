@@ -2,23 +2,20 @@ const router = require('express').Router();
 const { Characters, Users } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try{
-    const allUserCharacters = await Characters.findAll({
-        where:{
-            user_id: req.session.user_id
-        },
+    const oneCharacter = await Characters.findByPk( req.params.id, {
         include: [{
             model: Users,
             attributes: ["username"]
         }]
     });
-    const characters = allUserCharacters.map((character) => 
-        character.get({plain: true})
-    );
-    
-    res.render('displaycharacters', {
-       characters,
+
+    const character = oneCharacter.get({ plain: true });
+
+   
+    res.render('character', {
+       character,
        logged_in: req.session.logged_in
     });
 } catch (err){
