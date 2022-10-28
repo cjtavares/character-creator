@@ -13,7 +13,6 @@ router.get('/:id', withAuth, async (req, res) => {
 
     const character = oneCharacter.get({ plain: true });
 
-    console.log(character);
    
     res.render('character', {
        character,

@@ -16,8 +16,8 @@ router.get('/', withAuth, async (req, res) => {
     const characters = allUserCharacters.map((character) => 
         character.get({plain: true})
     );
-    console.log(characters[0].user.username);
-    res.render('usercharacters', {
+    
+    res.render('displaycharacters', {
        characters,
        logged_in: req.session.logged_in
     });
