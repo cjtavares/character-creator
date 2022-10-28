@@ -1,25 +1,23 @@
 const router = require('express').Router();
 const { Characters, Users } = require('../models');
 const withAuth = require('../utils/auth');
-const { route } = require('./home-routes');
 
 router.get('/', withAuth, async (req, res) => {
     try {
-        res.render('newChar', {
-            characters,
-            logged_in: req.session.logged_in
-         });
-    } catch (err) {
-        res.status(400).json(err);
+        const questionaire = ("./");
+        res.status(200).json()
+    } catch(err) {
+
     }
 });
 
 router.post('/', withAuth, async (req, res) => {
     try {
-        const newChar = await Characters.create(req.body)
+        const newCharData = await Characters.create(req.body);
+        res.status(200).json({message: "Character created!"}, newCharData)
     } catch (err) {
-        
+        res.status(400).json(err)
     }
-})
+});
 
 module.exports = router;
