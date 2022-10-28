@@ -16,8 +16,7 @@
 /* Clear floats after the columns */
 </style>
 
-    <h1>Dashboard</h1>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
@@ -47,15 +46,16 @@
   <div class="column" style="background-color:;">
     <div id="charViewBtn">
         <h2>
-        {{!-- <button class="btn btn-primary" type="button">View Your Characters!</button> --}}
-        <a class="bg-primary text-white p-2  rounded" href="./user-characters" role="button">View Your Characters!</a> 
+
+        <button class="btn btn-primary" type="button" onclick="window.location.href ='/user-characters'">View Your Characters!</button>
+
         </h2>
     </div>
   </div>
   <div class="column" style="background-color:;">
     <div id="charViewAllBtn">
         <h2>
-        <button class="btn btn-primary" type="button">View Sample Characters!</button>
+        <button class="btn btn-primary" type="button" onclick="window.location.href ='/allcharacters'" >View Sample Characters!</button>
         </h2>
     </div>
 </div>
