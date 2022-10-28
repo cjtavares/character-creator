@@ -2,7 +2,7 @@ const { Characters } = require('../models');
 
 const characterdata = [
   {
-   character_name: 'Dr Valeria Silva',
+   characters_name: 'Dr Valeria Silva',
    genre: 'Noir',
    companion: 'Bob',
    background: 'From the streets of the capital',
@@ -13,8 +13,8 @@ const characterdata = [
    user_id: 1,
   },
   {
-    character_name: 'Fantasy',
-    genre: 'Oran Tovana',
+    characters_name: 'Oran Tovana',
+    genre: 'Fantasy',
     companion: 'Pietro Quint',
     background: 'Farmer',
     age: '37',
@@ -24,7 +24,7 @@ const characterdata = [
     user_id: 2,
   },
   {
-   character_name: 'Rodrigo De Leon',
+   characters_name: 'Rodrigo De Leon',
    genre: 'Romance',
    companion: 'His horse, Zenyatta',
    background: "Nobleman's son",
@@ -36,7 +36,7 @@ const characterdata = [
    user_id: 3,
   },
   {
-    character_name: 'Anita Carlisle',
+    characters_name: 'Anita Carlisle',
     genre: 'Noir',
     companion: 'Her cat, Anna Meow Wong',
     background: "Grocer's kid turned Private Eye",
@@ -48,6 +48,6 @@ const characterdata = [
   }
 ];
 
-const seedCharacters = () => Comments.bulkCreate(characterdata);
+const seedCharacters = () => Characters.bulkCreate(characterdata);
 
 module.exports = seedCharacters;
