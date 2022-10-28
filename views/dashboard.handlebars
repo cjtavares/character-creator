@@ -1,14 +1,66 @@
 
-    <h1> HEYYY Dashboard</h1>
+    <h1>Dashboard</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+   width: 300px;
+  height: 100px;  
+  padding: 50px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: center;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+</style>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa:;">
     <div id="charCreateBtn">
-        <button class="btn btn-primary" type="button">+ Create Your Character!</button>
-    </div>
-
+        <h2>
+        <button class="btn btn-primary" type="button">Create Your Character!</button>
+        </h2>
+  </div>
+  <div class="column" style="background-color:;">
     <div id="charViewBtn">
-        <a class="bg-primary text-white p-2  rounded" href="./user-characters" role="button">View Your Characters!</a> 
+        <h2>
+        <button class="btn btn-primary" type="button">View Your Characters!</button>
+        </h2>
     </div>
-
+  </div>
+  <div class="column" style="background-color:;">
     <div id="charViewAllBtn">
-        
+        <h2>
         <button class="btn btn-primary" type="button">View Sample Characters!</button>
+        </h2>
+    </div>
+</div>
+
+
+        {{!-- <style>
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} --}}
     </div>
