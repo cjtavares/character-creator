@@ -1,6 +1,9 @@
 
 
 <form class="form login-form">
+  {{#if logged_in}}
+  <button class="btn btn-primary" type="button" onclick="window.location.href ='/dashboard'">Dashboard</button>
+  {{else}}
   <div class="form-group">
     <label for="user-login">Username:</label>
     <input class="form-input" type="text" id="username-login" />
@@ -12,6 +15,11 @@
   <div class="form-group">
     <button class="btn btn-primary" type="submit">login</button>
   </div>
+  <a href="/signup">Sign Up Instead</a>
+  {{/if}}
+
+
+
 </form>
 {{!-- switch /signup to route to create user --}}
 <a href="/signup">Sign Up Instead</a>

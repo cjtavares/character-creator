@@ -6,15 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/login.css">
   <title>character builder</title>
   
-  <link rel="stylesheet" type="text/css" href="../../public/css/login.css">
+  
 </head>
 
 <body>
   <header>
     <h1>Character Builder</h1>
   </header>
+  <nav>
+    {{#if logged_in}}
+    <button class="btn btn-primary logout" type="submit" onclick="window.location.href ='/user-characters'">Logout</button>
+    {{/if}}
+  </nav>
  
   <main>
       {{{body}}}
