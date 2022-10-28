@@ -1,11 +1,12 @@
 
 body {
-    background-image: url('./Background\ Image.png');
+    background-image: url("https://wwhttps://cdnb.artstation.com/p/assets/images/images/000/958/613/4k/mark-williams-forest-painting.jpg?1436998011w.google.com/url?sa=i&url=https%3A%2F%2Fwww.artstation.com%2Fartwork%2Fm8Vxe&psig=AOvVaw1QwN16SM-k1RQgPYlVILqP&ust=1667063457223000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPjNuvu4g_sCFQAAAAAdAAAAABAE");
     background-repeat: no-repeat;
+    background-image: cover;
     display: flex;
-
-    align-items: center;
+}
+   /* {} align-items: center;
     height: 100px;
     width: 33px;
     height: 100%;
-}
+} */
