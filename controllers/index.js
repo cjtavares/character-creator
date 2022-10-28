@@ -8,6 +8,6 @@ const userCharacters = require('./user-characters');
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 router.use('/dashboard', dashboardRoutes);
-router.use('/user-characters', dashboardRoutes);
+router.use('/user-characters', userCharacters);
 
 module.exports = router;
