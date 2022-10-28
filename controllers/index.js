@@ -8,6 +8,7 @@ const newChar = require('./newChar');
 const characterData = require('./characterData');
 const questionaire = require('./questionaire')
 
+const allCharacters = require('./allcharacters');
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
@@ -17,5 +18,6 @@ router.use('/newChar', newChar)
 router.use('/character', characterData);
 router.use('/questionaire', questionaire)
 
+router.use('/allcharacters', allCharacters);
 
 module.exports = router;
