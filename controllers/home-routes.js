@@ -3,8 +3,10 @@ const { Characters, Users } = require('../models');
 
 router.get('/', (req, res) => {
 res.render('login', {
-    layout: 'login'
+    layout: 'login',
+    logged_in: req.session.logged_in
 })
+
 });
 
 
