@@ -15,7 +15,7 @@ router.use('/dashboard', dashboardRoutes);
 router.use('/user-characters', userCharacters);
 router.use('/newChar', newChar)
 router.use('/character', characterData);
-router.use('./questionaire', questionaire)
+router.use('/questionaire', questionaire)
 
 
 module.exports = router;
