@@ -55,30 +55,32 @@ function genreNoir () {
     secretQuest.innerHTML = ("What secret will they take to the grave?")
     return genreSelect;
 };
+const submitButton = document.getElementById("submit");
 
 async function addNewCharacter(event) {
     event.preventDefault();
 
-    const name = document.querySelector("name").value;
-    const companion = document.querySelector("companion").value;
+    const name = document.querySelector("#name").value;
+    const companion = document.querySelector("#companion").value;
     const genre = genreSelect
-    const background = document.querySelector("background").value;
-    const age = document.querySelector("age").value;
-    const story_role = document.querySelector("story_role").value;
-    const goal = document.querySelector("goal").value;
-    const secret = document.querySelector("secret").value;
+    const background = document.querySelector("#background").value;
+    const age = document.querySelector("#age").value;
+    const story_role = document.querySelector("#story_role").value;
+    const goal = document.querySelector("#goal").value;
+    const secret = document.querySelector("#secret").value;
 
+        
     const response = await fetch('/api/createChar', {
         method: 'POST',
         body: JSON.stringify({
-            name,
-            companion,
-            genre,
-            background,
-            age,
-            story_role,
-            goal,
-            secret
+           characters_name: name,
+           companion: companion,
+           genre: genre,
+           background: background,
+           age: age,
+           story_role: story_role,
+           goal: goal,
+           secret: secret
         }),
         headers: {
             'Content-Type': 'application/json',
@@ -91,7 +93,8 @@ async function addNewCharacter(event) {
     }
 }
 
-document.addEventListener('submit', addNewCharacter);
+document.querySelector('#questionaire')
+submitButton.addEventListener('click', addNewCharacter);
 
 
 
