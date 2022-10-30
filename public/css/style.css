@@ -1,8 +1,10 @@
 
-body {
-    background-image: url('./Background\ Image.png'); 
+main {
+    background-image: url('/css/Backgroundimage.png'); 
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    color: white;
     /* display: flex;
 
     align-items: center;
@@ -10,12 +12,6 @@ body {
     height: 100%;
 
     color: white; */
-}
-
-
-*{
-    color: white;
-    
 }
 
 .yourcharacter{
