@@ -5,7 +5,6 @@ const { route } = require('./home-routes');
 
 router.get('/', withAuth, async (req, res) => {
     try {
-
         res.render('newChar', {
             logged_in: req.session.logged_in
          });

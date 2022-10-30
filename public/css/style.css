@@ -28,8 +28,6 @@ body {
 
 }
 
-}
-
 .inpLabel {
     text-shadow:none;
 }
@@ -37,5 +35,9 @@ body {
 #questionaire {
     color: white;
     text-shadow: 2px 2px black;
+}
+
+#questionaire span {
+    text-shadow: none;
 }
 

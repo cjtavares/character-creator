@@ -22,7 +22,7 @@ questionaire.setAttribute("style", "display:none");
 
 function genreRomance () {
     genreSelect = "Romance";
-    questionaire.setAttribute("style", "display: block");
+    questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is your character's most trusted confidante?")
     backQuest.innerHTML = ("Is their background grand or humble?")
     ageQuest.innerHTML = ("Of what age are they?")
@@ -34,7 +34,7 @@ function genreRomance () {
 
 function genreFantasy () {
     var genreSelect = "Fantasy";
-    questionaire.setAttribute("style", "display: block");
+    questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is their truest companion?")
     backQuest.innerHTML = ("From what origins do they hail?")
     ageQuest.innerHTML = ("How many winters have they seen?")
@@ -46,7 +46,7 @@ function genreFantasy () {
 
 function genreNoir () {
     var genreSelect = "Noir";
-    questionaire.setAttribute("style", "display: block");
+    questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is the one person they trust in this rotten city?")
     backQuest.innerHTML = ("Where did they come from, only to end up here?")
     ageQuest.innerHTML = ("How old are they?")
@@ -55,6 +55,33 @@ function genreNoir () {
     secretQuest.innerHTML = ("What secret will they take to the grave?")
     return genreSelect;
 };
+
+async function addNewCharacter(event) {
+    event.preventDefault();
+
+    const name = document.querySelector("name").value;
+    const companion = document.querySelector("companion").value;
+    const genre = genreSelect
+    const background = document.querySelector("background").value;
+    const age = document.querySelector("age").value;
+    const story_role = document.querySelector("story_role").value;
+    const goal = document.querySelector("goal").value;
+    const secret = document.querySelector("secret").value;
+
+    const response = await fetch('/api/createChar', {
+        method: 'POST',
+        body: JSON.stringify({
+            name,
+            companion,
+            genre,
+            background,
+            age,
+            story_role,
+            goal,
+            secret
+        })
+    })
+}
 
 
 
