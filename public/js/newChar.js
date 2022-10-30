@@ -65,7 +65,7 @@ async function addNewCharacter(event) {
     const companion = document.querySelector("#companion").value;
     const genre = genreSelect
     const background = document.querySelector("#background").value;
-    const age = document.querySelector("#age").value;
+    const age = document.querySelector("#age").value; // Issue: model only accepts integer values.
     const story_role = document.querySelector("#story_role").value;
     const goal = document.querySelector("#goal").value;
     const secret = document.querySelector("#secret").value;
@@ -88,7 +88,7 @@ async function addNewCharacter(event) {
         }),
     });
     if (response.ok) {
-        // document.location.replace('/user-characters');
+        document.location.replace('/user-characters');
     } else {
         alert('Character Submission Failed!');
     }
