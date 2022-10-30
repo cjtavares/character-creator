@@ -79,9 +79,19 @@ async function addNewCharacter(event) {
             story_role,
             goal,
             secret
-        })
-    })
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    if (response.ok) {
+        document.location.replace('/');
+    } else {
+        alert('Character Submission Failed!');
+    }
 }
+
+document.addEventListener('submit', newFormHandler);
 
 
 
