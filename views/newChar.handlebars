@@ -1,48 +1,53 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm">Select a genre!</div>
+        <div class="col-sm text-white text-center h3">Select a genre!</div>
     </div>
-    <div class="row">
-        <div class="col-sm">Romance</div>
-        <div class="col-sm">Epic Fantasy</div>
-        <div class="col-sm">Noir</div>
+    <div class="row d-flex justify-content-around">
+        <div class="col-3">
+            <input class="btn btn-primary" type="button" value="Romance" id="romanceButton">
+        </div>
+        <div class="col-3">
+            <input class="btn btn-primary" type="button" value="Epic Fantasy" id="fantasyButton">
+        </div>
+        <div class="col-3">
+            <input class="btn btn-primary" type="button" value="Noir" id="noirButton">
+        </div>
     </div>
 </div>
-<section>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Name:</span>
-  </div>
-  <input type="text" class="form-control" placeholder="Character Name" aria-label="Character Name" aria-describedby="basic-addon1">
-</div>
-
+<section id="questionaire">
     <div class="input-group mb-3">
-        <h3>Who is your character's closest companion?</h3>
+    <div class="input-group-prepend">
+        <span class="input-group-text inpLabel" id="basic-addon1">Name:</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Character Name" aria-label="Character Name" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <h3 id="friendQuest">Who is your character's most trusted confidante?</h3>
     <input type="text" class="form-control" placeholder="Companion" aria-label="Companion" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
-        <h3>What is your character's background?</h3>
+        <h3 id="backQuest">What is your character's background?</h3>
     <input type="text" class="form-control" placeholder="Background" aria-label="Background" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
-        <h3>How old is your character?</h3>
+        <h3 id="ageQuest">How old is your character?</h3>
     <input type="text" class="form-control" placeholder="Age" aria-label="Age" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
-        <h3>What role does your character play in the story?</h3>
+        <h3 id="roleQuest">What role does your character play in the story?</h3>
     <input type="text" class="form-control" placeholder="Story-Role" aria-label="Story-Role" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
-        <h3>What is your character's main goal?</h3>
+        <h3 id="goalQuest">What is your character's main goal?</h3>
     <input type="text" class="form-control" placeholder="Goal" aria-label="Goal" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group mb-3">
-        <h3>What is your character's deepest secret?</h3>
+        <h3 id="secretQuest">What is your character's deepest secret?</h3>
     <input type="text" class="form-control" placeholder="Secret" aria-label="Secret" aria-describedby="basic-addon1">
     </div>
 
@@ -50,3 +55,5 @@
         <button class="btn btn-primary" type="submit">Submit</button>
     </div>
 </section>
+
+<script src="/js/newChar.js"></script>
