@@ -1,3 +1,5 @@
+// const session = require("express-session");
+
 // Pulled elements from newChar.handlebars
 const questionaire = document.getElementById("questionaire");
 const romanceButton = document.getElementById("romanceButton");
@@ -10,6 +12,7 @@ const ageQuest = document.getElementById("ageQuest");
 const roleQuest = document.getElementById("roleQuest");
 const goalQuest = document.getElementById("goalQuest");
 const secretQuest = document.getElementById("secretQuest");
+const submitButton = document.getElementById("submitButton")
 
 
 var genreSelect = ""
@@ -22,7 +25,7 @@ questionaire.setAttribute("style", "display:none");
 
 function genreRomance () {
     genreSelect = "Romance";
-    questionaire.setAttribute("style", "display: block");
+    questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is your character's most trusted confidante?")
     backQuest.innerHTML = ("Is their background grand or humble?")
     ageQuest.innerHTML = ("Of what age are they?")
@@ -33,8 +36,8 @@ function genreRomance () {
 };
 
 function genreFantasy () {
-    var genreSelect = "Fantasy";
-    questionaire.setAttribute("style", "display: block");
+    genreSelect = "Fantasy";
+    questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is their truest companion?")
     backQuest.innerHTML = ("From what origins do they hail?")
     ageQuest.innerHTML = ("How many winters have they seen?")
@@ -45,8 +48,8 @@ function genreFantasy () {
 };
 
 function genreNoir () {
-    var genreSelect = "Noir";
-    questionaire.setAttribute("style", "display: block");
+    genreSelect = "Noir";
+    questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is the one person they trust in this rotten city?")
     backQuest.innerHTML = ("Where did they come from, only to end up here?")
     ageQuest.innerHTML = ("How old are they?")
@@ -55,6 +58,46 @@ function genreNoir () {
     secretQuest.innerHTML = ("What secret will they take to the grave?")
     return genreSelect;
 };
+
+async function addNewCharacter(event) {
+    event.preventDefault();
+    const name = document.querySelector("#name").value;
+    const companion = document.querySelector("#companion").value;
+    const genre = genreSelect
+    const background = document.querySelector("#background").value;
+    const age = document.querySelector("#age").value; // Issue: model only accepts integer values.
+    const story_role = document.querySelector("#story_role").value;
+    const goal = document.querySelector("#goal").value;
+    const secret = document.querySelector("#secret").value;
+    
+    console.log(genre)
+    const response = await fetch('/api/createChar', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            genre: genre,
+            characters_name: name,
+            companion: companion, 
+            background: background,
+            age: age,
+            story_role: story_role,
+            goal: goal,
+            secret: secret,
+        }),
+    });
+    if (response.ok) {
+        document.location.replace('/user-characters');
+    } else {
+        alert('Character Submission Failed!');
+    }
+};
+
+document.querySelector('#questionaire');
+submitButton.addEventListener('click', addNewCharacter);
+
 
 
 
