@@ -14,7 +14,7 @@ router.post('/', withAuth, async (req, res) => {
             story_role: req.body.story_role,
             goal: req.body.goal,
             secret: req.body.secret,
-            user_id: req.session.logged_in
+            user_id: req.session.user_id,
     });
          res.status(200).json(newCharacter);
      } catch (err) {

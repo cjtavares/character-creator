@@ -30,7 +30,7 @@ Characters.init(
             allowNull: false,
         },
         age:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         story_role:{
