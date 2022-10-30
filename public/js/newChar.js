@@ -1,3 +1,5 @@
+// const session = require("express-session");
+
 // Pulled elements from newChar.handlebars
 const questionaire = document.getElementById("questionaire");
 const romanceButton = document.getElementById("romanceButton");
@@ -10,6 +12,7 @@ const ageQuest = document.getElementById("ageQuest");
 const roleQuest = document.getElementById("roleQuest");
 const goalQuest = document.getElementById("goalQuest");
 const secretQuest = document.getElementById("secretQuest");
+const submitButton = document.getElementById("submitButton")
 
 
 var genreSelect = ""
@@ -57,6 +60,7 @@ function genreNoir () {
 };
 const submitButton = document.getElementById("submit");
 
+console.log(document.querySelector("#name").value)
 async function addNewCharacter(event) {
     event.preventDefault();
 
@@ -73,28 +77,29 @@ async function addNewCharacter(event) {
     const response = await fetch('/api/createChar', {
         method: 'POST',
         body: JSON.stringify({
-           characters_name: name,
-           companion: companion,
-           genre: genre,
-           background: background,
-           age: age,
-           story_role: story_role,
-           goal: goal,
-           secret: secret
+            characters_name: name,
+            companion: companion,
+            genre: genre,
+            background: background,
+            age: age,
+            story_role: story_role,
+            goal: goal,
+            secret: secret,
         }),
         headers: {
             'Content-Type': 'application/json',
         },
     });
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/user-characters');
     } else {
         alert('Character Submission Failed!');
     }
 }
 
-document.querySelector('#questionaire')
+document.querySelector('#questionaire');
 submitButton.addEventListener('click', addNewCharacter);
+
 
 
 
