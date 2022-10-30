@@ -1,11 +1,40 @@
 
 body {
-    background-image: url('./Background\ Image.png');
+    background-image: url('./Background\ Image.png'); 
     background-repeat: no-repeat;
-    background-image: cover;
-    display: flex;
+    background-size: cover;
+    /* display: flex;
+
     align-items: center;
     height: 100px;
-    width: 33px;
     height: 100%;
+
+    color: white; */
 }
+
+
+*{
+    color: white;
+    
+}
+
+.yourcharacter{
+    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    margin-left: 200px;
+    padding: 250px 150px;
+
+}
+
+
+.inpLabel {
+    text-shadow:none;
+}
+
+#questionaire {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
