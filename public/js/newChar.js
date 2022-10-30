@@ -1,3 +1,5 @@
+// const session = require("express-session");
+
 // Pulled elements from newChar.handlebars
 const questionaire = document.getElementById("questionaire");
 const romanceButton = document.getElementById("romanceButton");
@@ -10,6 +12,7 @@ const ageQuest = document.getElementById("ageQuest");
 const roleQuest = document.getElementById("roleQuest");
 const goalQuest = document.getElementById("goalQuest");
 const secretQuest = document.getElementById("secretQuest");
+const submitButton = document.getElementById("submitButton")
 
 
 var genreSelect = ""
@@ -56,42 +59,43 @@ function genreNoir () {
     return genreSelect;
 };
 
+console.log(document.querySelector("#name").value)
 async function addNewCharacter(event) {
     event.preventDefault();
 
-    const name = document.querySelector("name").value;
-    const companion = document.querySelector("companion").value;
+    const name = document.querySelector("#name").value;
+    const companion = document.querySelector("#companion").value;
     const genre = genreSelect
-    const background = document.querySelector("background").value;
-    const age = document.querySelector("age").value;
-    const story_role = document.querySelector("story_role").value;
-    const goal = document.querySelector("goal").value;
-    const secret = document.querySelector("secret").value;
+    const background = document.querySelector("#background").value;
+    const age = document.querySelector("#age").value;
+    const story_role = document.querySelector("#story_role").value;
+    const goal = document.querySelector("#goal").value;
+    const secret = document.querySelector("#secret").value;
 
     const response = await fetch('/api/createChar', {
         method: 'POST',
         body: JSON.stringify({
-            name,
-            companion,
-            genre,
-            background,
-            age,
-            story_role,
-            goal,
-            secret
+            characters_name: name,
+            companion: companion,
+            genre: genre,
+            background: background,
+            age: age,
+            story_role: story_role,
+            goal: goal,
+            secret: secret,
         }),
         headers: {
             'Content-Type': 'application/json',
         },
     });
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/user-characters');
     } else {
         alert('Character Submission Failed!');
     }
 }
 
-document.addEventListener('submit', addNewCharacter);
+submitButton.addEventListener('click', addNewCharacter)
 
 
 
