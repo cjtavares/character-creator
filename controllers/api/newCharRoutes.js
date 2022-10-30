@@ -3,23 +3,23 @@ const { Users, Characters } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Add a character to the database
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     try {
          const newCharacter = await Characters.create({
-            characters_name: req.body.name,
-            companion: req.body.companion,
             genre: req.body.genre,
+            characters_name: req.body.characters_name,
+            companion: req.body.companion,
             background: req.body.background,
             age: req.body.age,
             story_role: req.body.story_role,
             goal: req.body.goal,
             secret: req.body.secret,
-            user_id: req.session.logged_in
+            user_id: req.session.user_id,
     });
-        //  res.status(200).json(newCharacter);
+        res.status(200).json(newCharacter);
      } catch (err) {
-         res.json(err);
-         res.status(500).json(err)
+        console.log(err)
+         res.status(500).json(err) 
      }
  });
 
