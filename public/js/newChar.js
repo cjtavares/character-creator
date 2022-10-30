@@ -69,7 +69,8 @@ async function addNewCharacter(event) {
     const story_role = document.querySelector("#story_role").value;
     const goal = document.querySelector("#goal").value;
     const secret = document.querySelector("#secret").value;
-
+    
+    console.log(genre)
     const response = await fetch('/api/createChar', {
         method: 'POST',
         headers: {
@@ -77,9 +78,9 @@ async function addNewCharacter(event) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            characters_name: name,
-            companion: companion,
             genre: genre,
+            characters_name: name,
+            companion: companion, 
             background: background,
             age: age,
             story_role: story_role,
@@ -92,9 +93,11 @@ async function addNewCharacter(event) {
     } else {
         alert('Character Submission Failed!');
     }
-}
+};
 
-submitButton.addEventListener('click', addNewCharacter)
+document.querySelector('#questionaire');
+submitButton.addEventListener('click', addNewCharacter);
+
 
 
 
