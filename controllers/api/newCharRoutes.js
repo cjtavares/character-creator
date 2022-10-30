@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
     try {
          var newCharacter = await Characters.create({
-            name: req.body.name,
+            characters_name: req.body.name,
             companion: req.body.companion,
             genre: req.body.genre,
             background: req.body.background,

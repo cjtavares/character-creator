@@ -20,54 +20,55 @@
     <div class="input-group-prepend">
         <span class="input-group-text inpLabel shadow-none" id="basic-addon1">Name:</span>
     </div>
-       <textarea class="form-control" placeholder="name" name="name">
-    {{name}}
+       <textarea class="form-control" placeholder="name" name="name" id="name">
+        Character Name
     </textarea>
     </div>
+
     <div class="input-group mb-3">
         <h3 id="friendQuest">Who is your character's most trusted confidante?</h3>
-    <textarea class="form-control" placeholder="companion" name="companion">
-    {{companion}}
+    <textarea class="form-control" placeholder="companion" name="companion" id="companion">
+    Companion
     </textarea>
     </div>
 
     <div class="input-group mb-3">
         <h3 id="backQuest">What is your character's background?</h3>
-    <textarea class="form-control" placeholder="background" name="background">
-    {{background}}
+    <textarea class="form-control" placeholder="background" name="background" id="background">
+    Background
     </textarea>
     </div>
 
     <div class="input-group mb-3">
         <h3 id="ageQuest">How old is your character?</h3>
-    <textarea class="form-control" placeholder="age" name="age">
-    {{age}}
+    <textarea class="form-control" placeholder="age" name="age" id="age">
+    Age
     </textarea>
     </div>
 
     <div class="input-group mb-3">
         <h3 id="roleQuest">What role does your character play in the story?</h3>
-    <textarea class="form-control" placeholder="story_role" name="story_role">
-    {{story_role}}
+    <textarea class="form-control" placeholder="story_role" name="story_role" id="story_role">
+    Story Role
     </textarea>
     </div>
 
     <div class="input-group mb-3">
         <h3 id="goalQuest">What is your character's main goal?</h3>
-    <textarea class="form-control" placeholder="goal" name="goal">
-    {{goal}}
+    <textarea class="form-control" placeholder="goal" name="goal" id="goal">
+    Goal
     </textarea>
     </div>
 
     <div class="input-group mb-3">
         <h3 id="secretQuest">What is your character's deepest secret?</h3>
-    <textarea class="form-control" placeholder="secret" name="secret">
-    {{secret}}
+    <textarea class="form-control" placeholder="secret" name="secret" id="secret">
+    Secret
     </textarea>
     </div>
 
     <div>
-        <button class="btn btn-primary" type="submit" onclick=addNewCharacter() value="Submit">Submit</button>
+        <button class="btn btn-primary" type="button" value="Button" id="submitButton">Submit</button>
     </div>
 </section>
 
