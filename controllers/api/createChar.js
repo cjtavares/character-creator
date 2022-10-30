@@ -5,7 +5,9 @@ const withAuth = require('../../utils/auth');
 // Add a character to the database
 router.post('/', async (req, res) => {
     try {
-         const newCharacter = await Characters.create({
+         var newCharacter = await Characters.create({
+            characters_name: req.body.characters_name,
+            companion: req.body.companion,
             genre: req.body.genre,
             characters_name: req.body.characters_name,
             companion: req.body.companion,
@@ -23,4 +25,4 @@ router.post('/', async (req, res) => {
      }
  });
 
- module.exports = router;
+module.exports = router;

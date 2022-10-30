@@ -36,7 +36,7 @@ function genreRomance () {
 };
 
 function genreFantasy () {
-    var genreSelect = "Fantasy";
+    genreSelect = "Fantasy";
     questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is their truest companion?")
     backQuest.innerHTML = ("From what origins do they hail?")
@@ -48,7 +48,7 @@ function genreFantasy () {
 };
 
 function genreNoir () {
-    var genreSelect = "Noir";
+    genreSelect = "Noir";
     questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is the one person they trust in this rotten city?")
     backQuest.innerHTML = ("Where did they come from, only to end up here?")
@@ -58,14 +58,14 @@ function genreNoir () {
     secretQuest.innerHTML = ("What secret will they take to the grave?")
     return genreSelect;
 };
-const addNewCharacter = async (event) => {
-    event.preventDefault();
 
+async function addNewCharacter(event) {
+    event.preventDefault();
     const name = document.querySelector("#name").value;
     const companion = document.querySelector("#companion").value;
     const genre = genreSelect
     const background = document.querySelector("#background").value;
-    const age = document.querySelector("#age").value;
+    const age = document.querySelector("#age").value; // Issue: model only accepts integer values.
     const story_role = document.querySelector("#story_role").value;
     const goal = document.querySelector("#goal").value;
     const secret = document.querySelector("#secret").value;
@@ -73,6 +73,10 @@ const addNewCharacter = async (event) => {
     console.log(genre)
     const response = await fetch('/api/createChar', {
         method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
             genre: genre,
             characters_name: name,
@@ -83,7 +87,6 @@ const addNewCharacter = async (event) => {
             goal: goal,
             secret: secret,
         }),
-        headers: {'Content-type': 'application/json'},
     });
     if (response.ok) {
         document.location.replace('/user-characters');
