@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
     try {
          var newCharacter = await Characters.create({
-            characters_name: req.body.name,
+            characters_name: req.body.characters_name,
             companion: req.body.companion,
             genre: req.body.genre,
             background: req.body.background,
@@ -14,7 +14,7 @@ router.post('/', withAuth, async (req, res) => {
             story_role: req.body.story_role,
             goal: req.body.goal,
             secret: req.body.secret,
-            user_id: req.session.logged_in
+            user_id: req.session.user_id,
     });
          res.status(200).json(newCharacter);
      } catch (err) {
@@ -22,4 +22,4 @@ router.post('/', withAuth, async (req, res) => {
      }
  });
 
- module.exports = router;
+module.exports = router;
