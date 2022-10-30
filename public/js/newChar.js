@@ -59,10 +59,8 @@ function genreNoir () {
     return genreSelect;
 };
 
-console.log(document.querySelector("#name").value)
 async function addNewCharacter(event) {
     event.preventDefault();
-
     const name = document.querySelector("#name").value;
     const companion = document.querySelector("#companion").value;
     const genre = genreSelect
@@ -74,6 +72,10 @@ async function addNewCharacter(event) {
 
     const response = await fetch('/api/createChar', {
         method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
             characters_name: name,
             companion: companion,
@@ -84,12 +86,9 @@ async function addNewCharacter(event) {
             goal: goal,
             secret: secret,
         }),
-        headers: {
-            'Content-Type': 'application/json',
-        },
     });
     if (response.ok) {
-        document.location.replace('/user-characters');
+        // document.location.replace('/user-characters');
     } else {
         alert('Character Submission Failed!');
     }
