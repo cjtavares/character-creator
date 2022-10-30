@@ -91,7 +91,7 @@ async function addNewCharacter(event) {
     }
 }
 
-document.addEventListener('submit', newFormHandler);
+document.addEventListener('submit', addNewCharacter);
 
 
 

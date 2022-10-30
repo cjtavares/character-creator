@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Users, Characters } = require('../../models');
 const withAuth = require('../../utils/auth');
-const { route } = require('./home-routes');
 
 // Add a character to the database
 router.post('/', withAuth, async (req, res) => {
@@ -15,11 +14,12 @@ router.post('/', withAuth, async (req, res) => {
             story_role: req.body.story_role,
             goal: req.body.goal,
             secret: req.body.secret,
-            user_id: req.body.user_id
+            user_id: req.session.logged_in
     });
          res.status(200).json(newCharacter);
      } catch (err) {
          res.json(err);
      }
  });
-   
+
+ module.exports = router;
