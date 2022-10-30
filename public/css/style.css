@@ -59,3 +59,7 @@ main {
     color: gold;
     font-weight: bolder;
 }
+#questionaire span {
+    text-shadow: none;
+}
+
