@@ -1,8 +1,10 @@
 
 body {
-    background-image: url('./Background\ Image.png'); 
+    background-image: url('../assests/kiwihug-cqhXfrRHCPo-unsplash.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    /* color: white; */
     /* display: flex;
 
     align-items: center;
@@ -12,22 +14,14 @@ body {
     color: white; */
 }
 
-
-*{
-    color: white;
-    
-}
-
 .yourcharacter{
     background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    margin-left: 200px;
-    padding: 250px 150px;
-
+    margin-top: 8%;
+    padding: 200px;
 }
-
 
 .inpLabel {
     text-shadow:none;
@@ -38,7 +32,36 @@ body {
     text-shadow: 2px 2px black;
 }
 
+.allcharacter{
+    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    margin-top: 8%;
+    padding: 200px;
+
+}
+
+.createcharacter{
+    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    margin-left: 15%;
+    margin-top: 8%;
+    padding: 200px;
+
+}
+
+.allcharacter:hover{
+    color: gold;
+    font-weight: bolder;
+}
 #questionaire span {
     text-shadow: none;
+}
+
+.title{
+    font-family: 'Caveat', cursive;
 }
 

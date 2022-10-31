@@ -70,7 +70,7 @@ async function addNewCharacter(event) {
     const goal = document.querySelector("#goal").value;
     const secret = document.querySelector("#secret").value;
     
-    console.log(genre)
+    
     const response = await fetch('/api/createChar', {
         method: 'POST',
         headers: {
