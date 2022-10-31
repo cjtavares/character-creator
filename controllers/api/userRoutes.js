@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Users, Characters } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// /api/login
+// /api/users/login
 router.post('/login', async (req, res) => {
     try {
       const userData = await Users.findOne({ where: { username: req.body.username}});
@@ -35,7 +35,7 @@ router.post('/login', async (req, res) => {
     }
     });
 
-    // /api/logout
+    // /api/users/logout
     router.post('/logout', (req, res) => {
       console.log(req.session.logged_in)
       if (req.session.logged_in) {
@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
         res.status(404).end();
       }
     });
-
+        //   /api/users/signup
     router.post("/signup", async (req, res) => {
       try{
         const signup = await Users.create({
