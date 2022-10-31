@@ -1,6 +1,6 @@
 <section>
   <a href="/dashboard">Return to Dashboard</a>
-      <div>
+      {{!-- <div>
         <h2> {{character.characters_name}}</h2>
         <p>Posted by: {{character.user.username}}</p>
         <p>Genre: {{character.genre}}</p>
@@ -10,6 +10,21 @@
         <p>{{character.story_role}}</p>
         <p>{{character.goal}}</p>
         <p>{{character.secret}}</p>
+      </div> --}}
+      {{!-- This helps the JavaScript file understand the current Genre and make a different bio accordingly. --}}
+      <div>
+        <h2>{{character.characters_name}}</h2>
+        <h4>A {{character.genre}} character created by {{character.user.username}}</h4>
+        <p>Age: {{character.age}}</p>
+        <p>{{character.characters_name}} is the {{character.story_role}} character of their story; their goal is to seek {{character.goal}} with the aid of {{character.companion}}.</p>
+        <p>Their origins? {{character.background}}</p>
+        <p>Most characters hide a secret; theirs? {{character.secret}}.</p>
       </div>
-    
+      {{!-- This is should add a share button to the page. --}}
+      <div class="share-btn">
+          <a class="btn-facebook" data-id="fb">Facebook</a>
+          <a class="btn-twitter" data-id="tw">Twitter</a>
+          <a class="btn-mail" data-id="mail">E-Mail</a>
+      </div>
 </section>
+<script src="//cdn.jsdelivr.net/npm/share-buttons/dist/share-buttons.js"></script>

@@ -6,7 +6,7 @@ router.get('/', withAuth, async (req, res) => {
     try{
         const allCharacters = await Characters.findAll({ 
             include: [{
-                model: Users, //from models table taking their username to add to date were pulling
+                model: Users, //from models table taking their username to add to data we're pulling
                 attributes: ['username']
             }]
         });
