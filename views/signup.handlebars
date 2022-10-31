@@ -1,13 +1,14 @@
 
 <body>
-
+<img src="public\css\mystic.png">
 <form action="/action_page.php" style="border:1px solid #ccc">
+<script src="public\css\style.css"></script>
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
 
-    <label for="email"><b>Username</b></label>
+    <label ><b>Username</b></label>
     <input class="newUser" type="text"  name="newUser" required>
 
     <label for="psw"><b>Password</b></label>
@@ -19,7 +20,7 @@
 
     <div class="clearfix">
     
-      <button type="submit" class="signupbtn" onclick="window.location.href ='/dashboard'">Sign Up</button>
+      <button type="submit" id="signupBtn">Sign Up</button>
     </div>
   </div>
 </form>
@@ -29,5 +30,5 @@
 
 </form>
 
-<script src="/controllers/signup.js"></script>
+<script src="/js/signup.js"></script>
  

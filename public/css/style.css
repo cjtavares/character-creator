@@ -131,7 +131,7 @@ button:hover {
 } 
 
 .signupMainBackgroung {
-    background-image: url(''); 
+    background-image: url('public\css\mystic.png'); 
     background-repeat: no-repeat;
     background-size: cover;
 }
