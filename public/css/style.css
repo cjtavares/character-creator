@@ -19,12 +19,9 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    
+    margin-top: 8%;
     padding: 200px;
-
-
 }
-
 
 .inpLabel {
     text-shadow:none;
@@ -40,7 +37,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    
+    margin-top: 8%;
     padding: 200px;
 
 }
@@ -50,7 +47,8 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    
+    margin-left: 15%;
+    margin-top: 8%;
     padding: 200px;
 
 }
