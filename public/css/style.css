@@ -14,14 +14,7 @@ body {
     color: white; */
 }
 
-.yourcharacter{
-    background-image: url('../assests/sketch1.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: white;
-    margin-top: 8%;
-    padding: 200px;
-}
+
 
 .inpLabel {
     text-shadow:none;
@@ -36,9 +29,10 @@ body {
     background-image: url('../assests/sketch2.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    color: white;
+    color: black;
     margin-top: 8%;
     padding: 200px;
+    font-size: larger;
 
 }
 
@@ -46,11 +40,21 @@ body {
     background-image: url('../assests/sketch3.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    color: purple;
+    color: black;
     margin-left: 15%;
     margin-top: 8%;
     padding: 200px;
+    font-size: larger;
+}
 
+.yourcharacter{
+  background-image: url('../assests/sketch1.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: black;
+  margin-top: 8%;
+  padding: 200px;
+  font-size: larger;
 }
 
 /* .allcharacter:hover{
@@ -94,7 +98,7 @@ body {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  /* width: 100%; */
   opacity: 0.9;
 } 
 
@@ -136,4 +140,5 @@ button:hover {
 /*///////// END OF STYLING FOR SIGN UP PAGE*/
 .title{
     font-family: 'Caveat', cursive;
+    font-weight: bolder;
 }
