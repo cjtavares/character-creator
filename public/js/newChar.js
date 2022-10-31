@@ -94,6 +94,5 @@ async function addNewCharacter(event) {
         alert('Character Submission Failed!');
     }
 };
-
 document.querySelector('#questionaire');
 submitButton.addEventListener('click', addNewCharacter);
