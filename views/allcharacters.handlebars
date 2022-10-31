@@ -1,12 +1,17 @@
  <section>
   <a href="/dashboard">Return to Dashboard</a>
+   <div class="row border border-black">
+        <h2 class="title col">Character Name</h2>
+        <h2 class="title col">Genre</h2>
+        <h2 class="title col">Created by </h2>
+      </div>
    {{#each everyCharacter as |character|}}
-      <div>
-        <h2>
-        <a href="/character/{{id}}">{{characters_name}}</a>
+      <div class="row border border-black">
+        <h2 class="col">
+        <a href="/character/{{id}}" class="title">{{characters_name}}</a>
       </h2>
-        <p> {{character.genre}}</p>
-        <p> {{ character.user.username }}</p>
+        <p class="title col"> {{character.genre}}</p>
+        <p class="title col"> {{ character.user.username }}</p>
       </div>
     {{/each}}
   </section>
