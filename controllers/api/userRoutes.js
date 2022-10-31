@@ -47,4 +47,18 @@ router.post('/login', async (req, res) => {
       }
     });
 
+    router.post("/signup", async (req, res) => {
+      try{
+        const signup = await Users.create({
+          username: req.body.new_user,
+          password: req.body.password
+        });
+        res.status(200).json(signup);
+      } catch (err) {
+        res.status(500).json(err)
+      }
+
+      }
+    )
+
     module.exports = router;
