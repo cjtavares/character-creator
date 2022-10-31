@@ -1,8 +1,18 @@
 body {
-    background-image: url('../assests/annie-spratt-h-LcVG8W1XY-unsplash.jpg'); 
+    background-image: url('./pexels-pixabay-159833.jpg'); 
     background-size: cover;
-    border-radius: 30px;
     background-repeat: no-repeat;
 }
 
+.login-form{
+    margin-top: auto;
+}
+
+.signUp{
+   color: antiquewhite;
+}
+
+.charecterBuilder{
+    color: blanchedalmond;
+}
 
