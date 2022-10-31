@@ -22,7 +22,7 @@ fantasyButton.addEventListener("click", genreFantasy);
 noirButton.addEventListener("click", genreNoir);
 
 questionaire.setAttribute("style", "display:none");
-
+// This function sets the questions to fit a Romance character.
 function genreRomance () {
     genreSelect = "Romance";
     questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
@@ -34,7 +34,7 @@ function genreRomance () {
     secretQuest.innerHTML = ("What shocking secret is held to their heart?")
     return genreSelect;
 };
-
+// This function sets the questions to fit a Fantasy character.
 function genreFantasy () {
     genreSelect = "Fantasy";
     questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
@@ -46,7 +46,7 @@ function genreFantasy () {
     secretQuest.innerHTML = ("What dark secret do they keep close?")
     return genreSelect;
 };
-
+// This function sets the questions to fit a Noir character.
 function genreNoir () {
     genreSelect = "Noir";
     questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
@@ -58,18 +58,19 @@ function genreNoir () {
     secretQuest.innerHTML = ("What secret will they take to the grave?")
     return genreSelect;
 };
-
+// This is the function that takes in the values provided by the user and posts them to the route.
 async function addNewCharacter(event) {
     event.preventDefault();
     const name = document.querySelector("#name").value;
     const companion = document.querySelector("#companion").value;
     const genre = genreSelect
     const background = document.querySelector("#background").value;
-    const age = document.querySelector("#age").value; // Issue: model only accepts integer values.
+    const age = document.querySelector("#age").value;
     const story_role = document.querySelector("#story_role").value;
     const goal = document.querySelector("#goal").value;
     const secret = document.querySelector("#secret").value;
-
+    
+    console.log(genre)
     const response = await fetch('/api/createChar', {
         method: 'POST',
         headers: {
@@ -77,9 +78,9 @@ async function addNewCharacter(event) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            characters_name: name,
-            companion: companion,
             genre: genre,
+            characters_name: name,
+            companion: companion, 
             background: background,
             age: age,
             story_role: story_role,
@@ -92,13 +93,7 @@ async function addNewCharacter(event) {
     } else {
         alert('Character Submission Failed!');
     }
-}
+};
 
-submitButton.addEventListener('click', addNewCharacter)
-
-
-
-
-
-
-
+document.querySelector('#questionaire');
+submitButton.addEventListener('click', addNewCharacter);
