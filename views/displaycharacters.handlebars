@@ -1,11 +1,11 @@
  <section>
   <a href="/dashboard">Return to Dashboard</a>
    {{#each characters as |character|}}
-      <div>
-        <h2>
-        <a class="name" href="/character/{{id}}">{{characters_name}}</a>
+      <div class="row border border-black">
+        <h2 class="col-6">
+        <a class="name title " href="/character/{{id}}">{{characters_name}}</a>
       </h2>
-        <p> {{character.genre}}</p>
+        <p class="title col-6"> {{character.genre}}</p>
       </div>
     {{/each}}
   </section>
