@@ -27,10 +27,10 @@ function genreRomance () {
     genreSelect = "Romance";
     questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is your character's most trusted confidante?")
-    backQuest.innerHTML = ("Is their background grand or humble?")
-    ageQuest.innerHTML = ("Of what age are they?")
+    backQuest.innerHTML = ("What is the background of this striking persona?")
+    ageQuest.innerHTML = ("Of how many years is their age?")
     roleQuest.innerHTML = ("What is their role in this grand romance?")
-    goalQuest.innerHTML = ("What goal does their heart most desire?")
+    goalQuest.innerHTML = ("What goal does their heart most desperately seek?")
     secretQuest.innerHTML = ("What shocking secret is held to their heart?")
     return genreSelect;
 };
@@ -42,7 +42,7 @@ function genreFantasy () {
     backQuest.innerHTML = ("From what origins do they hail?")
     ageQuest.innerHTML = ("How many winters have they seen?")
     roleQuest.innerHTML = ("What role do they play in this grand tale?")
-    goalQuest.innerHTML = ("What motivates their every deed?")
+    goalQuest.innerHTML = ("What quest do they seek?")
     secretQuest.innerHTML = ("What dark secret do they keep close?")
     return genreSelect;
 };
@@ -52,9 +52,9 @@ function genreNoir () {
     questionaire.setAttribute("style", "display: flex; justify-content: center; flex-direction: column");
     friendQuest.innerHTML = ("Who is the one person they trust in this rotten city?")
     backQuest.innerHTML = ("Where did they come from, only to end up here?")
-    ageQuest.innerHTML = ("How old are they?")
+    ageQuest.innerHTML = ("How old are they in years?")
     roleQuest.innerHTML = ("What part do they play?")
-    goalQuest.innerHTML = ("What drives this character?")
+    goalQuest.innerHTML = ("What are they looking for?")
     secretQuest.innerHTML = ("What secret will they take to the grave?")
     return genreSelect;
 };
