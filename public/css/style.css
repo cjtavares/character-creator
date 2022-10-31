@@ -1,10 +1,10 @@
 
-main {
-    background-image: url('/css/Backgroundimage.png'); 
+body {
+    background-image: url('../assests/kiwihug-cqhXfrRHCPo-unsplash.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    color: white;
+    /* color: white; */
     /* display: flex;
 
     align-items: center;
@@ -19,12 +19,9 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    
+    margin-top: 8%;
     padding: 200px;
-
-
 }
-
 
 .inpLabel {
     text-shadow:none;
@@ -40,7 +37,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    
+    margin-top: 8%;
     padding: 200px;
 
 }
@@ -50,7 +47,8 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    
+    margin-left: 15%;
+    margin-top: 8%;
     padding: 200px;
 
 }
@@ -136,3 +134,7 @@ button:hover {
     background-size: cover;
 }
 /*///////// END OF STYLING FOR SIGN UP PAGE*/
+.title{
+    font-family: 'Caveat', cursive;
+}
+
