@@ -53,10 +53,10 @@ body {
 
 }
 
-.allcharacter:hover{
+/* .allcharacter:hover{
     color: gold;
     font-weight: bolder;
-}
+} */
 #questionaire span {
     text-shadow: none;
 }
@@ -64,4 +64,4 @@ body {
 .title{
     font-family: 'Caveat', cursive;
 }
-
+ 

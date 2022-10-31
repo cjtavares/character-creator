@@ -1,6 +1,17 @@
 body {
-    background-image: url('./Screen\ Shot\ 2022-10-29\ at\ 9.59.18\ PM.png'); 
+    background-image: url('./pexels-pixabay-159833.jpg'); 
     background-size: cover;
-    border-radius: 30px;
     background-repeat: no-repeat;
+}
+
+.login-form{
+    margin-top: auto;
+}
+
+.signUp{
+   color: antiquewhite;
+}
+
+.charecterBuilder{
+    color: blanchedalmond;
 }
