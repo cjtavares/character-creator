@@ -1,70 +1,12 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<div class="card">
-  <img src="" alt="" style="width:100%">
-  <div class="container">
-
-<style>
-{{!-- * {
-  box-sizing: border-box;
-   width: 300px;
-  height: 100px;  
-  padding: 50px;
-} --}}
-/* Create three equal columns that floats next to each other */
-{{!-- .column {
-  float: center;
-  width: 100%;
-  padding: 10px;
-} --}}
-/* Clear floats after the columns */
-</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-{{!-- * {
-  box-sizing: border-box;
-   width: 300px;
-  height: 100px;  
-  padding: 50px;
-} --}}
-
-/* Create three equal columns that floats next to each other */
-{{!-- .column {
-  float: center;
-  width: 100%;
-  padding: 10px;
-} --}}
-
-/* Clear floats after the columns */
-</style>
-
+{{!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
 <div class="row">
-  <div class="column" style="background-color:#aaa:;">
-
-    <div id="charCreateBtn">
-        <h2>
-
-         <button class="btn btn-primary" type="button" onclick="window.location.href ='/newChar'">+ Create A New Character!</button>
-
-        </h2>
-  </div>
-  <div class="column" style="background-color:;">
-    <div id="charViewBtn">
-        <h2>
-
-        <button class="btn yourcharacter" type="button" onclick="window.location.href ='/user-characters'">View Your Characters!</button>
-
-        </h2>
-    </div>
-  </div>
-  <div class="column" style="background-color:;">
-    <div id="charViewAllBtn">
-        <h2>
-        <button class="btn allcharacter" type="button" onclick="window.location.href ='/allcharacters'" >View Sample Characters!</button>
-        </h2>
-    </div>
+   
+  <button  id="charCreateBtn" class="btn col createcharacter" type="button" onclick="window.location.href ='/newChar'">+ Create A New Character!</button>
+     
+  <button  id="charViewBtn" class="btn col yourcharacter" type="button" onclick="window.location.href ='/user-characters'">View Your Characters!</button>
+        
+  <button id="charViewAllBtn" class="btn col allcharacter " type="button" onclick="window.location.href ='/allcharacters'" >View Sample Characters!</button>
+    
 </div>
 
 
@@ -89,4 +31,3 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 } --}}
-
