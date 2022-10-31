@@ -15,7 +15,7 @@ body {
 }
 
 .yourcharacter{
-    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-image: url('../assests/sketch1.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
@@ -33,7 +33,7 @@ body {
 }
 
 .allcharacter{
-    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-image: url('../assests/sketch2.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
@@ -43,10 +43,10 @@ body {
 }
 
 .createcharacter{
-    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-image: url('../assests/sketch3.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    color: white;
+    color: purple;
     margin-left: 15%;
     margin-top: 8%;
     padding: 200px;
@@ -54,7 +54,7 @@ body {
 }
 
 .allcharacter:hover{
-    color: gold;
+    color: brown;
     font-weight: bolder;
 }
 #questionaire span {
