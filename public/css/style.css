@@ -14,49 +14,52 @@ body {
     color: white; */
 }
 
-.yourcharacter{
-    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: white;
-    margin-top: 8%;
-    padding: 200px;
-}
+
 
 .inpLabel {
     text-shadow:none;
 }
 
 #questionaire {
-    color: white;
-    text-shadow: 2px 2px black;
+    color: black;
 }
 
 .allcharacter{
-    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-image: url('../assests/sketch2.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    color: white;
+    color: black;
     margin-top: 8%;
     padding: 200px;
+    font-size: larger;
 
 }
 
 .createcharacter{
-    background-image: url('../assests/craig-whitehead-pozX3oDOD1g-unsplash.jpg');
+    background-image: url('../assests/sketch3.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    color: white;
+    color: black;
     margin-left: 15%;
     margin-top: 8%;
     padding: 200px;
-
+    font-size: larger;
 }
 
-.allcharacter:hover{
+.yourcharacter{
+  background-image: url('../assests/sketch1.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: black;
+  margin-top: 8%;
+  padding: 200px;
+  font-size: larger;
+}
+
+/* .allcharacter:hover{
     color: gold;
     font-weight: bolder;
-}
+} */
 #questionaire span {
     text-shadow: none;
 }
@@ -94,7 +97,7 @@ body {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  /* width: 100%; */
   opacity: 0.9;
 } 
 
@@ -108,6 +111,38 @@ button:hover {
   float: left;
   width: 50%;
 } 
+
+.logout {
+    display: flex;
+    justify-content: end;
+    font-size: xx-large;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    margin-left: 75%;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+
+/* Adds styling to the share buttons on the character view page. */
+.share-btn a {
+    border-radius: 1px;
+    border: solid black 1px;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: antiquewhite;
+}
+
+.share-btn a:hover {
+    background-color: bisque;
+    cursor: pointer;
+}
+
+
 
 /* Add padding to container elements */
 .container {
@@ -136,15 +171,5 @@ button:hover {
 /*///////// END OF STYLING FOR SIGN UP PAGE*/
 .title{
     font-family: 'Caveat', cursive;
+    font-weight: bolder;
 }
-
-.share-btn > a {
-    border: 1px solid #ccc;
-    padding: 5px;
-    font-size: 12px;
-    font-family: Verdana, Arial;
-}
-.share-btn > a:hover {
-    cursor: pointer;
-}
-

@@ -1,27 +1,22 @@
 
+<form class="form login-form position-absolute top-0 start-50 translate-middle-x">
 
-<form class="form login-form">
   {{#if logged_in}}
-  <button class="btn btn-primary" type="button" onclick="window.location.href ='/dashboard'">Dashboard</button>
+  <button class="btn btn-warning" type="button" onclick="window.location.href ='/dashboard'">Dashboard</button>
   {{else}}
   <div class="form-group">
-    <label for="user-login">Username:</label>
+    <label for="user-login" class="title ">Username:</label>
     <input class="form-input" type="text" id="username-login" />
   </div>
   <div class="form-group">
-    <label for="password-login">Password:</label>
+    <label for="password-login" class="title ">Password:</label>
     <input class="form-input" type="password" id="password-login" />
   </div>
   <div class="form-group">
-    <button class="btn btn-primary" type="submit">login</button>
+    <button class="btn-warning title" type="submit">login</button>
   </div>
-  <a href="/signup">Sign Up Instead</a>
+  <a class="signUp title" href="/signup">Sign Up Instead</a>
   {{/if}}
-
-
-
 </form>
-{{!-- switch /signup to route to create user --}}
-<a href="/signup">Sign Up Instead</a>
 <script src="/js/login.js"></script>
  
